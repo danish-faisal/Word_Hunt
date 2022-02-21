@@ -2,6 +2,7 @@ import { Container } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
 
 function App() {
   const [meanings, setMeanings] = useState([]);
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="App" style={{ height: '100vh', backgroundColor: '#282c34', color: '#fff' }}>
       <Container maxWidth="md" style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-        Dictionary
+        <Header />
       </Container>
     </div>
   );
