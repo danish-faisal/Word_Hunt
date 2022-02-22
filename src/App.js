@@ -10,7 +10,7 @@ function App() {
 
   async function dictionaryAPI() {
     try {
-      const data = await axios('https://api.dictionaryapi.dev/api/v2/entries/en/plane');
+      const data = await axios(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
 
       console.log(data.data);
     } catch (error) {
@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     dictionaryAPI();
-  }, []);
+  }, [word]);
 
   return (
     <div className="App" style={{ height: '100vh', backgroundColor: '#282c34', color: '#fff' }}>
