@@ -12,6 +12,7 @@ const Definitions = ({ word, meanings }) => {
                             meaning.definitions.map((def) => (
                                 <div className='singleMeaning' style={{ backgroundColor: "white", color: "black" }}>
                                     <b>{def.definition}</b>
+                                    <hr />
                                     {
                                         def.example && (<span><b>Example: </b>{def.example}</span>)
                                     }
