@@ -2,13 +2,13 @@ import { createTheme, TextField, ThemeProvider } from '@mui/material';
 import React from 'react';
 import './Header.css';
 
-const Header = ({ word, setWord }) => {
+const Header = ({ word, setWord, theme }) => {
     const darkTheme = createTheme({
         palette: {
             primary: {
-                main: '#fff'
+                main: theme ? "#000" : "#fff"
             },
-            mode: 'dark',
+            mode: theme ? "light" : "dark",
         },
     });
 

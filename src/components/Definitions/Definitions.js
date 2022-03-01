@@ -1,7 +1,7 @@
 import React from "react";
 import "./Definitions.css";
 
-const Definitions = ({ meanings, word, LightTheme }) => {
+const Definitions = ({ meanings, word, theme }) => {
     const audioUrl = meanings && meanings[0] && meanings[0].phonetics[0] ? meanings[0].phonetics[0].audio : "";
 
     return (
@@ -9,6 +9,7 @@ const Definitions = ({ meanings, word, LightTheme }) => {
             {/* audio---------------------------- */}
             {meanings[0] && word && audioUrl && (
                 <audio className="audioComp"
+                    style={{ backgroundColor: theme ? "#fff" : "#000" }}
                     src={audioUrl}
                     controls
                 >
@@ -26,8 +27,8 @@ const Definitions = ({ meanings, word, LightTheme }) => {
                             <div
                                 className="singleMeaning"
                                 style={{
-                                    backgroundColor: LightTheme ? "#3b5360" : "white",
-                                    color: LightTheme ? "white" : "black",
+                                    backgroundColor: theme ? "#3b5360" : "white",
+                                    color: theme ? "white" : "black",
                                 }}
                             >
                                 {def.definition}
