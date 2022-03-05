@@ -32,13 +32,14 @@ function App() {
     }}>
       <Container maxWidth="md" style={{ display: 'flex', flexDirection: 'column', height: '100vh', justifyContent: 'space-evenly' }}>
         <div style={{ position: "absolute", top: 0, right: 15, paddingTop: 10 }}>
-          <span style={{ cursor: "default" }}>{theme ? <span title='Dark Mode'>&#127761;</span> : <span title='Light Mode'>&#127765;</span>}</span>
+          {/* <span>{theme ?  : }</span> */}
+          <span style={{ cursor: "default" }} title='Dark Mode'>&#127761;</span>
           <Switch
             checked={theme}
             onChange={() => setTheme(!theme)}
             inputProps={{ 'aria-label': 'controlled' }}
           />
-          {/* <span>{theme ? "" : "Light Mode"}</span> */}
+          <span style={{ cursor: "default" }} title='Light Mode'>&#127765;</span>
         </div>
         <Header word={word} setWord={setWord} theme={theme} />
         {meanings && <Definitions word={word} meanings={meanings} theme={theme} />}
