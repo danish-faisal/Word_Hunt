@@ -22,6 +22,7 @@ function App() {
 
   useEffect(() => {
     dictionaryAPI();
+    // eslint-disable-next-line
   }, [word]);
 
   return (
