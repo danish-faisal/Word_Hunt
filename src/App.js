@@ -10,13 +10,13 @@ function App() {
   const [word, setWord] = useState("");
   const [theme, setTheme] = useState(false);
 
-  async function dictionaryAPI() {
+  const dictionaryAPI = async () => {
     try {
       const data = await axios(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
 
       setMeanings(data.data);
     } catch (error) {
-      console.error("Error:" + error);
+      console.error(error);
     }
   }
 
