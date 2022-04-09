@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Dictionary App using React JS and Material UI & deployed on Netlify
+
+Live: https://wordhunt-react.netlify.app/
 
 ## Available Scripts
 
