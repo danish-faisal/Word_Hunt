@@ -1,6 +1,6 @@
 # Project Description
 
-A Dictionary App using React JS and Material UI & deployed on Netlify
+A Dictionary App using React JS and Material UI, also a PWA & deployed on Netlify
 
 Live: https://wordhunt-react.netlify.app/
 
